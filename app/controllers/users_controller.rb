@@ -31,4 +31,9 @@ class UsersController < ApplicationController
       redirect_to users_path, :notice => "Can't delete yourself."
     end
   end
+
+  def wordie
+    @user = User.find(params[:id])
+    @twitter_screenname = @user.twitter_screenname
+  end
 end
