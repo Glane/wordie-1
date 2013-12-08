@@ -25,7 +25,7 @@ class User < ActiveRecord::Base
 	end
 
 	def tweet_wordie?
-		current_status.split(" ").include?("hackathon")
+		current_status.split(" ").include?("Hackathon")
 	end
 
 end

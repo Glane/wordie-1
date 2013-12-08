@@ -4,4 +4,5 @@ Wordie::Application.routes.draw do
   resources :users
 
   get "/users/:id/wordie" => "users#wordie", as: "wordie"
+  post "/users/:id/wordie" => "users#wordie", as: "wordie2"
 end
