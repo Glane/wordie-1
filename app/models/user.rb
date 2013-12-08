@@ -20,4 +20,8 @@ class User < ActiveRecord::Base
 		end
 	end
 
+	def current_status
+		User.client_call.user(@twitter_screenname).status.text
+	end
+
 end
