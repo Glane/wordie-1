@@ -1,3 +1,31 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+        <!-- Version 4.3.2 -->
+        <link rel="stylesheet" href="http://cdn.jsdelivr.net/foundation/4.3.2/css/foundation.css">
+          <!-- put in font awesome -->
+        <!-- <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet"> -->
+          <!-- put in google fonts -->
+        <link href='http://fonts.googleapis.com/css?family=Paprika' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+        <link href='style.css' rel='stylesheet' type='text/css'>
+        
+        <style type="text/css">
+
+              /*This is used to see help see your 12 column grid*/
+              /** {
+              border: 1px solid red;
+              -moz-box-sizing: border-box;
+              -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+              }*/
+              /* You will put the rest of the styles here */
+        </style>
+    </head>
+
+<body>
+
 <h2>Edit <%= resource_name.to_s.humanize %></h2>
 <%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put, :class => 'form-vertical' }) do |f| %>
   <%= f.error_notification %>
@@ -14,3 +42,7 @@
 <h3>Cancel my account</h3>
 <p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete %>.</p>
 <%= link_to "Back", :back %>
+
+</body>
+
+</html>
