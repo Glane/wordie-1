@@ -11,7 +11,7 @@ class User < ActiveRecord::Base
 	# 		def instance_method
 	# 			User.client_call.user(@twitter_screenname).some_twitter_method
 	# 		end
-	def self.client_call
+	def self.twitter_call
 		Twitter::REST::Client.new do |config|
 			config.consumer_key        = ENV['CONSUMER_KEY']
 			config.consumer_secret     = ENV['CONSUMER_SECRET']
@@ -21,7 +21,7 @@ class User < ActiveRecord::Base
 	end
 
 	def current_status
-		User.client_call.user(@twitter_screenname).status.text
+		User.twitter_call.user(twitter_screenname).status.text
 	end
 
 end
