@@ -1,0 +1,45 @@
+/*This is the css style sheet used for asian market website*/
+
+body {
+ font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+
+}
+
+/*Used for all the titles on each page*/
+h1.header {
+	font-family: 'Paprika';
+	color: #7BA428;
+
+}
+
+h2 {
+	font-family: 'Paprika', sans-serif;
+	color: #7BA428;
+}
+
+/*Used for the smaller hearers with paragraphs*/
+h3 {
+	font-family: 'Paprika', sans-serif;
+	color: #7BA428;
+}
+
+h4.header {
+	font-family: 'Paprika', sans-serif;
+}
+
+p {
+	font-size: 14px;
+}
+
+/*Used with the dragon image, but may not be necessary.  Need to Test next week.*/
+h1.header.span {
+	display: inline; 
+	float:left;
+
+}
+
+/*This is the orange button for email and submitting orders*/
+div.row.button-group {
+	color: #B0C4DE;
+}

@@ -1,0 +1,11 @@
+<% if @user.tweet_wordie? %>
+	<script type="text/javascript">
+		alert("Congratulations, you tweeted the Wordie of the Day!");
+	</script>
+	<%= render "win" %>
+<% else %>
+	<script type="text/javascript">
+		alert("Sorry, your current Twitter status does not include the Wordie of the Day.");
+	</script>
+	<%= render "loss" %>
+<% end %>

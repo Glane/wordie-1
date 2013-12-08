@@ -1,8 +1,48 @@
-<h3>User</h3>
-<p>User: <%= @user.name %></p>
-<p>Email: <%= @user.email if @user.email %></p>
-<p>Current Twitter Status: <%= @user.current_status %></p>
+<!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<meta charset="UTF-8">
+				<!-- Version 4.3.2 -->
+				<link rel="stylesheet" href="http://cdn.jsdelivr.net/foundation/4.3.2/css/foundation.css">
+					<!-- put in font awesome -->
+				<!-- <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet"> -->
+					<!-- put in google fonts -->
+				<link href='http://fonts.googleapis.com/css?family=Paprika' rel='stylesheet' type='text/css'>
+				<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+				<link href='style.css' rel='stylesheet' type='text/css'>
+				
+				<style type="text/css">
 
-<%= button_to "Wordie?", wordie_path, :id => "wordie_button",
-      :class => "button" %>
+							/*This is used to see help see your 12 column grid*/
+							/** {
+							border: 1px solid red;
+							-moz-box-sizing: border-box;
+							-webkit-box-sizing: border-box;
+							box-sizing: border-box;
+							}*/
+							/* You will put the rest of the styles here */
+				</style>
+		</head>
 
+<body>
+			<!-- Title -->  	
+			  <div class="row">
+			  	<div class="large-12 columns">
+			  		<h1 class="header">USER</h1>
+			  			<p>User: <%= @user.name %></p>
+						<p>Email: <%= @user.email if @user.email %></p>
+						<p>Current Twitter Status: <%= @user.current_status %></p>
+						<!-- <p><img src = "wordie/app/assets/images/overheard.jpg" /></p> -->
+						<%= button_to "Wordie?", wordie_path, :id => "wordie_button", :class => "button" %>
+			  	</div>
+			  </div>
+
+			  <div class="row">
+			  	<div class="large-12 columns">	
+					<p><%= image_tag "overheard.jpg" %></p>
+				</div>
+			  </div>
+
+</body>
+
+</html>

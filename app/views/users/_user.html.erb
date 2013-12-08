@@ -1,9 +1,38 @@
-<div id="role-options-<%= user.id %>" class="modal" style="display: none;">
-  <%= simple_form_for user, :url => user_path(user), :html => {:method => :put, :class => 'form-horizontal' } do |f| %>
-    <div class="modal-header">
-      <a class="close" data-dismiss="modal">&#215;</a>
-      <h3>Change Role</h3>
-    </div>
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+        <!-- Version 4.3.2 -->
+        <link rel="stylesheet" href="http://cdn.jsdelivr.net/foundation/4.3.2/css/foundation.css">
+          <!-- put in font awesome -->
+        <!-- <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet"> -->
+          <!-- put in google fonts -->
+        <link href='http://fonts.googleapis.com/css?family=Paprika' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+        <link href='style.css' rel='stylesheet' type='text/css'>
+        
+        <style type="text/css">
+
+              /*This is used to see help see your 12 column grid*/
+              /** {
+              border: 1px solid red;
+              -moz-box-sizing: border-box;
+              -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+              }*/
+              /* You will put the rest of the styles here */
+        </style>
+    </head>
+
+    <body>
+
+
+  <div id="role-options-<%= user.id %>" class="modal" style="display: none;">
+    <%= simple_form_for user, :url => user_path(user), :html => {:method => :put, :class => 'form-horizontal' } do |f| %>
+      <div class="modal-header">
+        <a class="close" data-dismiss="modal">&#215;</a>
+        <h3>Change Role</h3>
+      </div>
     <div class="modal-body">
       <%= f.input :role_ids, :collection => Role.all, :as => :radio_buttons, :label_method => lambda {|t| t.name.titleize}, :label => false, :item_wrapper_class => 'inline', checked: user.role_ids.first %>
     </div>
@@ -13,3 +42,7 @@
     </div>
   <% end %>
 </div>
+
+</body>
+
+</html>
